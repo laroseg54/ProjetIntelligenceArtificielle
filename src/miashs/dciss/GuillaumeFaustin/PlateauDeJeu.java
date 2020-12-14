@@ -65,7 +65,8 @@ public class PlateauDeJeu extends Application {
 		primaryStage.setResizable(false);
 		ComboBox<Joueur> typeJoueurJaune = new ComboBox<Joueur>();
 		typeJoueurJaune.getItems().addAll(new JoueurHumain(Pion.JAUNE, jeu), new JoueurAuto(Pion.JAUNE, jeu),
-				new JoueurAutoMinMax(Pion.JAUNE, jeu, false), new JoueurAutoMinMax(Pion.JAUNE, jeu, true));
+				new JoueurAutoMinMax(Pion.JAUNE, jeu, false), new JoueurAutoMinMax(Pion.JAUNE, jeu, true),new JoueurAuto2(Pion.JAUNE, jeu),
+				new JoueurAutoMinMax2(Pion.JAUNE, jeu, false), new JoueurAutoMinMax2(Pion.JAUNE, jeu, true));
 		typeJoueurJaune.getSelectionModel().select(1);
 		Label labelJaune = new Label("joueur jaune :");
 		AnchorPane.setTopAnchor(typeJoueurJaune, 40.0);
@@ -74,7 +75,8 @@ public class PlateauDeJeu extends Application {
 		AnchorPane.setLeftAnchor(labelJaune, 0.0);
 		ComboBox<Joueur> typeJoueurRouge = new ComboBox<Joueur>();
 		typeJoueurRouge.getItems().addAll(new JoueurHumain(Pion.ROUGE, jeu), new JoueurAuto(Pion.ROUGE, jeu),
-				new JoueurAutoMinMax(Pion.ROUGE, jeu, false), new JoueurAutoMinMax(Pion.ROUGE, jeu, true));
+				new JoueurAutoMinMax(Pion.ROUGE, jeu, false), new JoueurAutoMinMax(Pion.ROUGE, jeu, true),new JoueurAuto2(Pion.ROUGE, jeu),
+				new JoueurAutoMinMax2(Pion.ROUGE, jeu, false), new JoueurAutoMinMax2(Pion.ROUGE, jeu, true));
 		typeJoueurRouge.getSelectionModel().select(1);
 		Label labelRouge = new Label("joueur rouge :");
 		AnchorPane.setTopAnchor(typeJoueurRouge, 80.0);
